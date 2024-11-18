@@ -1,4 +1,0 @@
-TODO: !!! Running `npx ptbk` without preinstalling `ptbk
-TODO: !!! Run independent of the NPM/NPX ecosystem
-
-🕋
