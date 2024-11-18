@@ -1,0 +1,409 @@
+{
+    "pipelineUrl": "https://promptbook.studio/examples/form.book",
+    "title": "Zpracování formuláře",
+    "promptbookUsedVersion": "0.74.0-7",
+    "promptExecutions": [
+        {
+            "prompt": {
+                "title": "Vycisteni problemu",
+                "pipelineUrl": "https://promptbook.studio/examples/form.book#vycisteni-problemu",
+                "parameters": {
+                    "businessProblem": "Potřebuju udělat z nového programovacího jazyka novou velkou věc, budoucnost programování/promptování/promptamovaní, něco jako Python nebo Node nebo Java avsak nevím jak na to? Můžete mi s tím pomoct?"
+                },
+                "content": "Zjednoduš surový popis problému ze strany zákazníka, odstraň nedůležité informace:\n\n\n> {businessProblem}\n",
+                "modelRequirements": {
+                    "modelVariant": "CHAT"
+                },
+                "expectations": {
+                    "name": "Paul",
+                    "description": "analytic who can simplify the problem",
+                    "modelRequirements": {
+                        "modelVariant": "CHAT",
+                        "modelName": "gpt-4",
+                        "systemMessage": "You are an analytic assistant who can simplify the problem.",
+                        "temperature": 0.5
+                    },
+                    "preparationIds": [
+                        1
+                    ]
+                }
+            },
+            "result": {
+                "content": "Potřebuji vytvořit nový programovací jazyk, který by se stal populární jako Python nebo Java. Nevím, jak začít. Můžete mi pomoci?",
+                "modelName": "gpt-4o-2024-08-06",
+                "timing": {
+                    "start": "2024-11-16T14:27:02.584Z",
+                    "complete": "2024-11-16T14:27:03.434Z"
+                },
+                "usage": {
+                    "price": {
+                        "value": 0,
+                        "isUncertain": true
+                    },
+                    "input": {
+                        "tokensCount": {
+                            "value": 95
+                        },
+                        "charactersCount": {
+                            "value": 105
+                        },
+                        "wordsCount": {
+                            "value": 11
+                        },
+                        "sentencesCount": {
+                            "value": 1
+                        },
+                        "linesCount": {
+                            "value": 5
+                        },
+                        "paragraphsCount": {
+                            "value": 2
+                        },
+                        "pagesCount": {
+                            "value": 1
+                        }
+                    },
+                    "output": {
+                        "tokensCount": {
+                            "value": 37
+                        },
+                        "charactersCount": {
+                            "value": 129
+                        },
+                        "wordsCount": {
+                            "value": 20
+                        },
+                        "sentencesCount": {
+                            "value": 3
+                        },
+                        "linesCount": {
+                            "value": 1
+                        },
+                        "paragraphsCount": {
+                            "value": 1
+                        },
+                        "pagesCount": {
+                            "value": 1
+                        }
+                    }
+                },
+                "rawPromptContent": "Zjednoduš surový popis problému ze strany zákazníka, odstraň nedůležité informace:\n\n\n> Potřebuju udělat z nového programovacího jazyka novou velkou věc, budoucnost programování/promptování/promptamovaní, něco jako Python nebo Node nebo Java avsak nevím jak na to? Můžete mi s tím pomoct?\n",
+                "rawRequest": {
+                    "model": "gpt-4o",
+                    "messages": [
+                        {
+                            "role": "user",
+                            "content": "Zjednoduš surový popis problému ze strany zákazníka, odstraň nedůležité informace:\n\n\n> Potřebuju udělat z nového programovacího jazyka novou velkou věc, budoucnost programování/promptování/promptamovaní, něco jako Python nebo Node nebo Java avsak nevím jak na to? Můžete mi s tím pomoct?\n"
+                        }
+                    ]
+                },
+                "rawResponse": {
+                    "id": "chatcmpl-AUE3LKWvGReBEGt11VDIZRIO0smOx",
+                    "object": "chat.completion",
+                    "created": 1731767223,
+                    "model": "gpt-4o-2024-08-06",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Potřebuji vytvořit nový programovací jazyk, který by se stal populární jako Python nebo Java. Nevím, jak začít. Můžete mi pomoci?",
+                                "refusal": null
+                            },
+                            "logprobs": null,
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 95,
+                        "completion_tokens": 37,
+                        "total_tokens": 132,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 0,
+                            "audio_tokens": 0
+                        },
+                        "completion_tokens_details": {
+                            "reasoning_tokens": 0,
+                            "audio_tokens": 0,
+                            "accepted_prediction_tokens": 0,
+                            "rejected_prediction_tokens": 0
+                        }
+                    },
+                    "system_fingerprint": "fp_45cf54deae"
+                }
+            }
+        },
+        {
+            "prompt": {
+                "title": "Ideace",
+                "pipelineUrl": "https://promptbook.studio/examples/form.book#ideace",
+                "parameters": {
+                    "filteredBusinessProblem": "Potřebuji vytvořit nový programovací jazyk, který by se stal populární jako Python nebo Java. Nevím, jak začít. Můžete mi pomoci?"
+                },
+                "content": "Napiš seznam 20 nápadů souvisejících s problémem a řešením, každý nápad na nový řádek:\n\n\n> {filteredBusinessProblem}\n",
+                "modelRequirements": {
+                    "modelVariant": "CHAT"
+                },
+                "expectations": {
+                    "name": "John",
+                    "description": "creative brainstormer",
+                    "modelRequirements": {
+                        "modelVariant": "CHAT",
+                        "modelName": "gpt-4",
+                        "systemMessage": "You are a creative brainstormer and helpful assistant.",
+                        "temperature": 1
+                    },
+                    "preparationIds": [
+                        1
+                    ],
+                    "lines": {
+                        "min": 5,
+                        "max": 25
+                    }
+                }
+            },
+            "result": {
+                "content": "1. Proveďte průzkum stávajících programovacích jazyků a identifikujte jejich slabiny, které by váš jazyk mohl řešit.\n2. Navrhněte jednoduchou a čitelnou syntaxi, která bude uživatelsky přívětivá.\n3. Zaměřte se na integraci umělé inteligence, aby váš jazyk usnadňoval práci s AI a strojovým učením.\n4. Implementujte silnou podporu pro paralelní a asynchronní programování k optimalizaci výkonu.\n5. Vytvořte robustní standardní knihovnu s rozšířenými možnostmi pro běžné úkoly.\n6. Zlepšete kompatibilitu s existujícími ekosystémy, aby váš jazyk mohl snadno integrovat s jinými technologiemi.\n7. Zajistěte, že váš jazyk bude podporovat různorodé platformy a zařízení, včetně IoT technologií.\n8. Vyvinout snadno použitelný a efektivní kompilátor nebo interpret pro váš jazyk.\n9. Umožněte snadnou refaktorizaci a podporu pro pokročilé refaktoringové nástroje.\n10. Zaměřte se na poskytnutí vynikající dokumentace a výukových materiálů.\n11. Zapojte komunitu a programátory do návrhu a vývoje jazyka prostřednictvím otevřeného vývoje.\n12. Vytvořte silný marketingový plán, který zvýrazní unikátní vlastnosti a výhody vašeho jazyka.\n13. Ujistěte se, že váš jazyk bude podporovat moderní bezpečnostní protokoly a praktiky.\n14. Poskytněte bezproblémovou integraci s cloudovými službami.\n15. Navrhněte jazyk, který usnadní manipulaci s velkými daty a datově náročnými úkoly.\n16. Implementujte pokročilé nástroje pro ladění a analýzu kódu pro rychlejší řešení problémů.\n17. Umožněte jednoduchou migraci ze staršího kódu nebo jiných programovacích jazyků.\n18. Zabudujte podporu pro mobilní aplikace a vývoj pro různé mobilní platformy.\n19. Provádějte uživatelské testování s reálnými vývojáři a iterativně zlepšujte funkce.\n20. Spolupracujte s akademickou obcí na vytvoření kurzů a školení využívajících váš jazyk.",
+                "modelName": "gpt-4o-2024-08-06",
+                "timing": {
+                    "start": "2024-11-16T14:27:03.442Z",
+                    "complete": "2024-11-16T14:27:13.934Z"
+                },
+                "usage": {
+                    "price": {
+                        "value": 0,
+                        "isUncertain": true
+                    },
+                    "input": {
+                        "tokensCount": {
+                            "value": 77
+                        },
+                        "charactersCount": {
+                            "value": 117
+                        },
+                        "wordsCount": {
+                            "value": 15
+                        },
+                        "sentencesCount": {
+                            "value": 1
+                        },
+                        "linesCount": {
+                            "value": 5
+                        },
+                        "paragraphsCount": {
+                            "value": 2
+                        },
+                        "pagesCount": {
+                            "value": 1
+                        }
+                    },
+                    "output": {
+                        "tokensCount": {
+                            "value": 580
+                        },
+                        "charactersCount": {
+                            "value": 1800
+                        },
+                        "wordsCount": {
+                            "value": 246
+                        },
+                        "sentencesCount": {
+                            "value": 40
+                        },
+                        "linesCount": {
+                            "value": 20
+                        },
+                        "paragraphsCount": {
+                            "value": 1
+                        },
+                        "pagesCount": {
+                            "value": 8
+                        }
+                    }
+                },
+                "rawPromptContent": "Napiš seznam 20 nápadů souvisejících s problémem a řešením, každý nápad na nový řádek:\n\n\n> Potřebuji vytvořit nový programovací jazyk, který by se stal populární jako Python nebo Java. Nevím, jak začít. Můžete mi pomoci?\n",
+                "rawRequest": {
+                    "model": "gpt-4o",
+                    "messages": [
+                        {
+                            "role": "user",
+                            "content": "Napiš seznam 20 nápadů souvisejících s problémem a řešením, každý nápad na nový řádek:\n\n\n> Potřebuji vytvořit nový programovací jazyk, který by se stal populární jako Python nebo Java. Nevím, jak začít. Můžete mi pomoci?\n"
+                        }
+                    ]
+                },
+                "rawResponse": {
+                    "id": "chatcmpl-AUE3MPOkJLtPDGZaIYZxGHQh3f7yZ",
+                    "object": "chat.completion",
+                    "created": 1731767224,
+                    "model": "gpt-4o-2024-08-06",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "1. Proveďte průzkum stávajících programovacích jazyků a identifikujte jejich slabiny, které by váš jazyk mohl řešit.\n2. Navrhněte jednoduchou a čitelnou syntaxi, která bude uživatelsky přívětivá.\n3. Zaměřte se na integraci umělé inteligence, aby váš jazyk usnadňoval práci s AI a strojovým učením.\n4. Implementujte silnou podporu pro paralelní a asynchronní programování k optimalizaci výkonu.\n5. Vytvořte robustní standardní knihovnu s rozšířenými možnostmi pro běžné úkoly.\n6. Zlepšete kompatibilitu s existujícími ekosystémy, aby váš jazyk mohl snadno integrovat s jinými technologiemi.\n7. Zajistěte, že váš jazyk bude podporovat různorodé platformy a zařízení, včetně IoT technologií.\n8. Vyvinout snadno použitelný a efektivní kompilátor nebo interpret pro váš jazyk.\n9. Umožněte snadnou refaktorizaci a podporu pro pokročilé refaktoringové nástroje.\n10. Zaměřte se na poskytnutí vynikající dokumentace a výukových materiálů.\n11. Zapojte komunitu a programátory do návrhu a vývoje jazyka prostřednictvím otevřeného vývoje.\n12. Vytvořte silný marketingový plán, který zvýrazní unikátní vlastnosti a výhody vašeho jazyka.\n13. Ujistěte se, že váš jazyk bude podporovat moderní bezpečnostní protokoly a praktiky.\n14. Poskytněte bezproblémovou integraci s cloudovými službami.\n15. Navrhněte jazyk, který usnadní manipulaci s velkými daty a datově náročnými úkoly.\n16. Implementujte pokročilé nástroje pro ladění a analýzu kódu pro rychlejší řešení problémů.\n17. Umožněte jednoduchou migraci ze staršího kódu nebo jiných programovacích jazyků.\n18. Zabudujte podporu pro mobilní aplikace a vývoj pro různé mobilní platformy.\n19. Provádějte uživatelské testování s reálnými vývojáři a iterativně zlepšujte funkce.\n20. Spolupracujte s akademickou obcí na vytvoření kurzů a školení využívajících váš jazyk.",
+                                "refusal": null
+                            },
+                            "logprobs": null,
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 77,
+                        "completion_tokens": 580,
+                        "total_tokens": 657,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 0,
+                            "audio_tokens": 0
+                        },
+                        "completion_tokens_details": {
+                            "reasoning_tokens": 0,
+                            "audio_tokens": 0,
+                            "accepted_prediction_tokens": 0,
+                            "rejected_prediction_tokens": 0
+                        }
+                    },
+                    "system_fingerprint": "fp_159d8341cc"
+                }
+            }
+        },
+        {
+            "prompt": {
+                "title": "Analyza",
+                "pipelineUrl": "https://promptbook.studio/examples/form.book#analyza",
+                "parameters": {
+                    "ideas": "1. Proveďte průzkum stávajících programovacích jazyků a identifikujte jejich slabiny, které by váš jazyk mohl řešit.\n2. Navrhněte jednoduchou a čitelnou syntaxi, která bude uživatelsky přívětivá.\n3. Zaměřte se na integraci umělé inteligence, aby váš jazyk usnadňoval práci s AI a strojovým učením.\n4. Implementujte silnou podporu pro paralelní a asynchronní programování k optimalizaci výkonu.\n5. Vytvořte robustní standardní knihovnu s rozšířenými možnostmi pro běžné úkoly.\n6. Zlepšete kompatibilitu s existujícími ekosystémy, aby váš jazyk mohl snadno integrovat s jinými technologiemi.\n7. Zajistěte, že váš jazyk bude podporovat různorodé platformy a zařízení, včetně IoT technologií.\n8. Vyvinout snadno použitelný a efektivní kompilátor nebo interpret pro váš jazyk.\n9. Umožněte snadnou refaktorizaci a podporu pro pokročilé refaktoringové nástroje.\n10. Zaměřte se na poskytnutí vynikající dokumentace a výukových materiálů.\n11. Zapojte komunitu a programátory do návrhu a vývoje jazyka prostřednictvím otevřeného vývoje.\n12. Vytvořte silný marketingový plán, který zvýrazní unikátní vlastnosti a výhody vašeho jazyka.\n13. Ujistěte se, že váš jazyk bude podporovat moderní bezpečnostní protokoly a praktiky.\n14. Poskytněte bezproblémovou integraci s cloudovými službami.\n15. Navrhněte jazyk, který usnadní manipulaci s velkými daty a datově náročnými úkoly.\n16. Implementujte pokročilé nástroje pro ladění a analýzu kódu pro rychlejší řešení problémů.\n17. Umožněte jednoduchou migraci ze staršího kódu nebo jiných programovacích jazyků.\n18. Zabudujte podporu pro mobilní aplikace a vývoj pro různé mobilní platformy.\n19. Provádějte uživatelské testování s reálnými vývojáři a iterativně zlepšujte funkce.\n20. Spolupracujte s akademickou obcí na vytvoření kurzů a školení využívajících váš jazyk.",
+                    "filteredBusinessProblem": "Potřebuji vytvořit nový programovací jazyk, který by se stal populární jako Python nebo Java. Nevím, jak začít. Můžete mi pomoci?",
+                    "fullname": "Pavol"
+                },
+                "content": "Napiš email pro {fullname}, který má tento problém:\n\n> {filteredBusinessProblem}\n\nZde je několik nápadů, jak by se dal problém řešit:\n\n- {ideas}\n",
+                "modelRequirements": {
+                    "modelVariant": "CHAT"
+                },
+                "expectations": {
+                    "name": "Anička",
+                    "description": "copywriterka",
+                    "modelRequirements": {
+                        "modelVariant": "CHAT",
+                        "modelName": "gpt-4",
+                        "systemMessage": "You are a creative and skillful copywriter.",
+                        "temperature": 0.9
+                    },
+                    "preparationIds": [
+                        1
+                    ],
+                    "sentences": {
+                        "min": 1
+                    },
+                    "pages": {
+                        "max": 1
+                    }
+                }
+            },
+            "result": {
+                "content": "Předmět: Společné kroky k tvorbě vašeho programovacího jazyka\n\nAhoj Pavol,\n\nděkuji za to, že ses obrátil na mě s tak zajímavým projektem. Vytvoření nového programovacího jazyka, který by se stal populárním jako Python nebo Java, je určitě náročný, ale vzrušující cíl. Rád ti pomohu s prvotními kroky. \n\n**1. Průzkum a analýza:** Začni průzkumem existujících programovacích jazyků. Zjisti, jaké mají slabiny a v čem se mohou vylepšit. Poznej jejich silné stránky i nedostatky, abys věděl, co by tvůj jazyk mohl nabídnout navíc.\n\n**2. Design syntaxe:** Navrhni jednoduchou a čitelnou syntaxi, která bude pro vývojáře snadno uchopitelná. Zamysli se, jakým způsobem by nové prvky mohly zjednodušit psaní kódu.\n\n**3. Integrace AI:** Moderní aplikace často využívají umělou inteligenci. Zvaž, jak by se tvůj jazyk mohl specializovat na integraci AI a strojového učení, což by bylo jedinečnou výhodou.\n\n**4. Výkon a standardní knihovna:** Ujisti se, že budeš mít silnou podporu pro paralelní a asynchronní programování k optimalizaci výkonu. Rovněž bys měl vytvořit efektivní a robustní standardní knihovnu, která usnadní řešení běžných úkolů.\n\n**5. Kompatibilita a platformní podpora:** Snaž se, aby tvůj jazyk snadno spolupracoval s existujícími technologiemi a byl kompatibilní s různorodými platformami a zařízeními.\n\n**6. Marketing a komunita:** Jakmile bude tvoje vize jasná, je důležité mít také dobrý marketingový plán. Založ komunitu, která ti pomůže s ověřením nápadů a vývojem.\n\nPodívej se na tento proces jako na dlouhodobý projekt a buď připraven na iterativní zlepšování na základě zpětné vazby od reálných uživatelů. Pokud potřebuješ další radu nebo konzultaci, jsem tu pro tebe.\n\nPřeji hodně úspěchů a těším se, až uvidím první výsledky!\n\nS pozdravem,\n\n[Vaše jméno]",
+                "modelName": "gpt-4o-2024-08-06",
+                "timing": {
+                    "start": "2024-11-17T09:14:19.462Z",
+                    "complete": "2024-11-17T09:14:27.035Z"
+                },
+                "usage": {
+                    "price": {
+                        "value": 0,
+                        "isUncertain": true
+                    },
+                    "input": {
+                        "tokensCount": {
+                            "value": 695
+                        },
+                        "charactersCount": {
+                            "value": 145
+                        },
+                        "wordsCount": {
+                            "value": 20
+                        },
+                        "sentencesCount": {
+                            "value": 1
+                        },
+                        "linesCount": {
+                            "value": 8
+                        },
+                        "paragraphsCount": {
+                            "value": 4
+                        },
+                        "pagesCount": {
+                            "value": 1
+                        }
+                    },
+                    "output": {
+                        "tokensCount": {
+                            "value": 573
+                        },
+                        "charactersCount": {
+                            "value": 1774
+                        },
+                        "wordsCount": {
+                            "value": 263
+                        },
+                        "sentencesCount": {
+                            "value": 25
+                        },
+                        "linesCount": {
+                            "value": 25
+                        },
+                        "paragraphsCount": {
+                            "value": 13
+                        },
+                        "pagesCount": {
+                            "value": 1
+                        }
+                    }
+                },
+                "rawPromptContent": "Napiš email pro Pavol, který má tento problém:\n\n> Potřebuji vytvořit nový programovací jazyk, který by se stal populární jako Python nebo Java. Nevím, jak začít. Můžete mi pomoci?\n\nZde je několik nápadů, jak by se dal problém řešit:\n\n- 1. Proveďte průzkum stávajících programovacích jazyků a identifikujte jejich slabiny, které by váš jazyk mohl řešit.\n- 2. Navrhněte jednoduchou a čitelnou syntaxi, která bude uživatelsky přívětivá.\n- 3. Zaměřte se na integraci umělé inteligence, aby váš jazyk usnadňoval práci s AI a strojovým učením.\n- 4. Implementujte silnou podporu pro paralelní a asynchronní programování k optimalizaci výkonu.\n- 5. Vytvořte robustní standardní knihovnu s rozšířenými možnostmi pro běžné úkoly.\n- 6. Zlepšete kompatibilitu s existujícími ekosystémy, aby váš jazyk mohl snadno integrovat s jinými technologiemi.\n- 7. Zajistěte, že váš jazyk bude podporovat různorodé platformy a zařízení, včetně IoT technologií.\n- 8. Vyvinout snadno použitelný a efektivní kompilátor nebo interpret pro váš jazyk.\n- 9. Umožněte snadnou refaktorizaci a podporu pro pokročilé refaktoringové nástroje.\n- 10. Zaměřte se na poskytnutí vynikající dokumentace a výukových materiálů.\n- 11. Zapojte komunitu a programátory do návrhu a vývoje jazyka prostřednictvím otevřeného vývoje.\n- 12. Vytvořte silný marketingový plán, který zvýrazní unikátní vlastnosti a výhody vašeho jazyka.\n- 13. Ujistěte se, že váš jazyk bude podporovat moderní bezpečnostní protokoly a praktiky.\n- 14. Poskytněte bezproblémovou integraci s cloudovými službami.\n- 15. Navrhněte jazyk, který usnadní manipulaci s velkými daty a datově náročnými úkoly.\n- 16. Implementujte pokročilé nástroje pro ladění a analýzu kódu pro rychlejší řešení problémů.\n- 17. Umožněte jednoduchou migraci ze staršího kódu nebo jiných programovacích jazyků.\n- 18. Zabudujte podporu pro mobilní aplikace a vývoj pro různé mobilní platformy.\n- 19. Provádějte uživatelské testování s reálnými vývojáři a iterativně zlepšujte funkce.\n- 20. Spolupracujte s akademickou obcí na vytvoření kurzů a školení využívajících váš jazyk.\n",
+                "rawRequest": {
+                    "model": "gpt-4o",
+                    "messages": [
+                        {
+                            "role": "user",
+                            "content": "Napiš email pro Pavol, který má tento problém:\n\n> Potřebuji vytvořit nový programovací jazyk, který by se stal populární jako Python nebo Java. Nevím, jak začít. Můžete mi pomoci?\n\nZde je několik nápadů, jak by se dal problém řešit:\n\n- 1. Proveďte průzkum stávajících programovacích jazyků a identifikujte jejich slabiny, které by váš jazyk mohl řešit.\n- 2. Navrhněte jednoduchou a čitelnou syntaxi, která bude uživatelsky přívětivá.\n- 3. Zaměřte se na integraci umělé inteligence, aby váš jazyk usnadňoval práci s AI a strojovým učením.\n- 4. Implementujte silnou podporu pro paralelní a asynchronní programování k optimalizaci výkonu.\n- 5. Vytvořte robustní standardní knihovnu s rozšířenými možnostmi pro běžné úkoly.\n- 6. Zlepšete kompatibilitu s existujícími ekosystémy, aby váš jazyk mohl snadno integrovat s jinými technologiemi.\n- 7. Zajistěte, že váš jazyk bude podporovat různorodé platformy a zařízení, včetně IoT technologií.\n- 8. Vyvinout snadno použitelný a efektivní kompilátor nebo interpret pro váš jazyk.\n- 9. Umožněte snadnou refaktorizaci a podporu pro pokročilé refaktoringové nástroje.\n- 10. Zaměřte se na poskytnutí vynikající dokumentace a výukových materiálů.\n- 11. Zapojte komunitu a programátory do návrhu a vývoje jazyka prostřednictvím otevřeného vývoje.\n- 12. Vytvořte silný marketingový plán, který zvýrazní unikátní vlastnosti a výhody vašeho jazyka.\n- 13. Ujistěte se, že váš jazyk bude podporovat moderní bezpečnostní protokoly a praktiky.\n- 14. Poskytněte bezproblémovou integraci s cloudovými službami.\n- 15. Navrhněte jazyk, který usnadní manipulaci s velkými daty a datově náročnými úkoly.\n- 16. Implementujte pokročilé nástroje pro ladění a analýzu kódu pro rychlejší řešení problémů.\n- 17. Umožněte jednoduchou migraci ze staršího kódu nebo jiných programovacích jazyků.\n- 18. Zabudujte podporu pro mobilní aplikace a vývoj pro různé mobilní platformy.\n- 19. Provádějte uživatelské testování s reálnými vývojáři a iterativně zlepšujte funkce.\n- 20. Spolupracujte s akademickou obcí na vytvoření kurzů a školení využívajících váš jazyk.\n"
+                        }
+                    ]
+                },
+                "rawResponse": {
+                    "id": "chatcmpl-AUVeExJxYQFeNfkdOCWK0zSY8c092",
+                    "object": "chat.completion",
+                    "created": 1731834858,
+                    "model": "gpt-4o-2024-08-06",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "Předmět: Společné kroky k tvorbě vašeho programovacího jazyka\n\nAhoj Pavol,\n\nděkuji za to, že ses obrátil na mě s tak zajímavým projektem. Vytvoření nového programovacího jazyka, který by se stal populárním jako Python nebo Java, je určitě náročný, ale vzrušující cíl. Rád ti pomohu s prvotními kroky. \n\n**1. Průzkum a analýza:** Začni průzkumem existujících programovacích jazyků. Zjisti, jaké mají slabiny a v čem se mohou vylepšit. Poznej jejich silné stránky i nedostatky, abys věděl, co by tvůj jazyk mohl nabídnout navíc.\n\n**2. Design syntaxe:** Navrhni jednoduchou a čitelnou syntaxi, která bude pro vývojáře snadno uchopitelná. Zamysli se, jakým způsobem by nové prvky mohly zjednodušit psaní kódu.\n\n**3. Integrace AI:** Moderní aplikace často využívají umělou inteligenci. Zvaž, jak by se tvůj jazyk mohl specializovat na integraci AI a strojového učení, což by bylo jedinečnou výhodou.\n\n**4. Výkon a standardní knihovna:** Ujisti se, že budeš mít silnou podporu pro paralelní a asynchronní programování k optimalizaci výkonu. Rovněž bys měl vytvořit efektivní a robustní standardní knihovnu, která usnadní řešení běžných úkolů.\n\n**5. Kompatibilita a platformní podpora:** Snaž se, aby tvůj jazyk snadno spolupracoval s existujícími technologiemi a byl kompatibilní s různorodými platformami a zařízeními.\n\n**6. Marketing a komunita:** Jakmile bude tvoje vize jasná, je důležité mít také dobrý marketingový plán. Založ komunitu, která ti pomůže s ověřením nápadů a vývojem.\n\nPodívej se na tento proces jako na dlouhodobý projekt a buď připraven na iterativní zlepšování na základě zpětné vazby od reálných uživatelů. Pokud potřebuješ další radu nebo konzultaci, jsem tu pro tebe.\n\nPřeji hodně úspěchů a těším se, až uvidím první výsledky!\n\nS pozdravem,\n\n[Vaše jméno]",
+                                "refusal": null
+                            },
+                            "logprobs": null,
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 695,
+                        "completion_tokens": 573,
+                        "total_tokens": 1268,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 0,
+                            "audio_tokens": 0
+                        },
+                        "completion_tokens_details": {
+                            "reasoning_tokens": 0,
+                            "audio_tokens": 0,
+                            "accepted_prediction_tokens": 0,
+                            "rejected_prediction_tokens": 0
+                        }
+                    },
+                    "system_fingerprint": "fp_159d8341cc"
+                }
+            }
+        }
+    ]
+}

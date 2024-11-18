@@ -1,0 +1,10 @@
+
+package.json
+package-lock.json
+# <- Note: This is not a Node.js project, so we don't want to commit these files
+
+node_modules
+
+.env
+.promptbook
+# <- TODO: [🧠] Should be `.promptbook` folder with execution cache commited or not
