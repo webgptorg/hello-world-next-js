@@ -4,7 +4,6 @@
     "license": "BUSL-1.1",
     "description": "Sample Book project using Promptbook and pure vanilla JavaScript in Node.js environment",
     "main": "index.js",
- 
     "repository": {
         "type": "git",
         "url": "git+https://github.com/webgptorg/hello-world-next-js.git"
@@ -22,6 +21,6 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
-        "ptbk": "0.86.5"
+        "ptbk": "0.103.0-20"
     }
 }
