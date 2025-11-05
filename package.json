@@ -21,6 +21,6 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
-        "ptbk": "0.103.0-32"
+        "ptbk": "0.103.0-33"
     }
 }
